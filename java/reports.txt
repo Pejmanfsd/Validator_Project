@@ -1,1 +1,2 @@
-
+The requirement of method isDomain maybe has a problem.
+If the string begins as '.', like ".abc.com", the method will return true,but it is not a valid domain name.
