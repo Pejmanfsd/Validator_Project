@@ -96,12 +96,15 @@ public class Validator {
 			if (!isPrefixChar(str1.charAt(i)))
 				return false;
 			// A period or dash, in the first portion must be followed by one or more
-			// alphanumeric characters. if (isSpecialChar(str1.charAt(i), false)) {
-			if (i == str1.length() - 1)
-				return false;
-			else if (!isAlphaNum(str1.charAt(i + 1)))
-				return false;
+			// alphanumeric characters.
+			if (isSpecialChar(str1.charAt(i), false)) {
+				if (i == str1.length() - 1)
+					return false;
+				else if (!isAlphaNum(str1.charAt(i + 1)))
+					return false;
+			}
 		}
+
 
 //		» The second portion contains only letters of the alphabet.
 		for (int i = 0; i < str2.length(); i++) {
