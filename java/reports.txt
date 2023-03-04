@@ -1,2 +1,6 @@
 The requirement of method isDomain maybe has a problem.
 If the string begins as '.', like ".abc.com", the method will return true,but it is not a valid domain name.
+
+the method safePassword 
+There is no requirement that every char should be a domain char, so why isDomainChar should be used?
+If I have to use it ,the code will be weird？
