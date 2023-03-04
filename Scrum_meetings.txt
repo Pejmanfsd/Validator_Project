@@ -1,0 +1,19 @@
+First Meeting Summary:
+
+	Date: March 3, 12:00 PM to 12:30 PM
+	Attendees: Entire group
+	Meeting Minutes Taker: Pejman
+
+	Agenda:
+	1. The group reviewed the project together.
+	2. The group discussed their opinions and questions about the project.
+	3. A GitHub repository was created for uploading the files.
+	4. The group decided to spend the first three days on the Source code and the last two days for the Word documentation.
+
+	Tasks for the next meeting:
+	1. Dividing the GitHub repository into four folders:
+		- Scrum meetings
+		- Word documentation
+		- Source code
+		- Flowchart
+	2. Working on the methods of the Source code individually.
