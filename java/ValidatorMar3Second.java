@@ -131,25 +131,27 @@ public class Validator {
 		char[] chrArray = str.toCharArray();
 		Arrays.sort(chrArray);
 		char chr;
-		int counter = 0; // count repeated character
+//		int counter = 0; // count repeated character
 		for (int i = 0; i < chrArray.length; i++) {
 			chr = chrArray[i];
-			if (chr >= 'A' && chr <= 'Z')
+			if ((!uLetter) && chr >= 'A' && chr <= 'Z')
 				uLetter = true;
-			else if (chr >= 'a' && chr <= 'z')
+			else if ((!lLetter) && chr >= 'a' && chr <= 'z')
 				lLetter = true;
-			else if (chr >= '0' && chr <= '9')
+			else if ((!number) && chr >= '0' && chr <= '9')
 				number = true;
-			else if (isSpecialChar(chr, true))
+			else if ((!specialChar) && isSpecialChar(chr, true))
 				specialChar = true;
 			// The same character must never be repeated more than twice
-			if (i < chrArray.length - 1) {
-				if (chr == chrArray[i + 1]) {
-					counter++;
-					if (counter > 1)
-						return false;
-				} else
-					counter = 0;
+			if (i > 0 && i < chrArray.length - 1) {
+				if ((chr == chrArray[i - 1]) && (chr == chrArray[i + 1]))
+					return false;
+//				if (chr == chrArray[i + 1]) {
+//					counter++;
+//					if (counter > 1)
+//						return false;
+//				} else
+//					counter = 0;
 			}
 		}
 		if (!(uLetter && lLetter && number && specialChar))
