@@ -17,8 +17,9 @@ First Meeting Summary:
 		- Source code
 		- Flowchart
 	2. Working on the methods of the Source code individually.
-	
-Day2	Meeting Summary:
+----------------------------------------------------------------------
+Second Meeting Summary:
+
 	Date: March 4, 11:00 PM to 11:15 PM
 	Attendees: Entire group
 	Meeting Minutes Taker: Shiyuan
@@ -31,5 +32,19 @@ Day2	Meeting Summary:
 	1. To complete coding and upload
 	2. To start checking and Debugging each other's code
 	3. To solve the issues that have been raised
-	
-	
+----------------------------------------------------------------------
+Third Meeting Summary:
+
+	Date: March 5, 11:00 PM to 11:30 PM
+	Attendees: Entire group
+	Meeting Minutes Taker: Pejman
+
+	Agenda:
+	1. The group reviewed some methods of the source code.
+	2. The group provided some questions that should be answered.
+	3. The group discussed to finish the project in the following day.
+
+	Tasks for the next meeting:
+	1. Debuging the source code.
+	2. Working on the Word document.
+----------------------------------------------------------------------
