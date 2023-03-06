@@ -1,0 +1,43 @@
+Methods Descrption
+
+isUpperCase
+Take a character as argument. Return true if the character is an uppercase letter, false otherwise.
+
+isLowerCase
+Take a character as argument. Return true if the character is a lowercase letter, false otherwise.
+
+isNum
+Take a character as argument. Return true if a character is a number between 0 to 9, false otherwise.
+
+isAlphaNum
+Take a character as argument. Return true if the character is a letter of the English alphabet (case insensitive) or a number between 0 and 9, false otherwise. Implemented by calling isUpperCase, isLowerCase and isNum.
+
+isSpecialChar
+Take a character as argument. Return true if the character is a dash (-), period (.), if the boolean argument is true also allow for the underscore (_) to return true, false otherwise. 
+
+isPrefixChar
+Take a character as argument. Return true if the character is an alphanumeric characters, dashes, periods, or underscores, false otherwise. Implemented by calling isAlphaNum and isSpecialChar.
+
+isDomainChar
+Take a character as argument. Return true if the character is an alphanumeric characters, dashesor periods, false otherwise. Implemented by calling isAlphaNum and isSpecialChar.
+
+singleAtSign
+Take a string as argument. Return true if the string contains exactly one '@', false otherwise.
+
+fetchBeforeAt
+Take a string as argument. Return a String containing the portion before the @ symbol.
+
+fetchAfterAt
+Take a string as argument. Return a String containing the portion after the @ symbol.
+
+isPrefix
+Take a string as argument. Return true if the string is a valid email prefix, false otherwise. Implemented by calling isAlphaNum, isPrefixChar and isSpecialChar. 
+
+isDomain
+Take a string as argument. Return true if the string is a valid email domain, false otherwise. Implemented by calling isAlphaNum, isDomainChar and isSpecialChar.
+
+	isEmail
+	isUsername
+
+safePassword
+Take a string as argument. Return true if the string is a safe password, false otherwise.. Implemented by calling isUpperCase, isLowerCase, isNum, isSpecialChar.
