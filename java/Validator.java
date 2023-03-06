@@ -2,20 +2,31 @@ import java.util.Arrays;
 
 public class Validator {
 
+	public static boolean isUpperCase(char chr) {
+		return chr >= 'A' && chr <= 'Z';
+	}
+
+	public static boolean isLowerCase(char chr) {
+		return chr >= 'a' && chr <= 'z';
+	}
+
+	public static boolean isNum(char chr) {
+		return chr >= '0' && chr <= '9';
+	}
+
 	public static boolean isAlphaNum(char chr) {
 		// true if the character is a letter of the English alphabet (case insensitive)
 		// or a number between 0 and 9, false otherwise
-		return ((chr >= 'A' && chr <= 'Z') || (chr >= 'a' && chr <= 'z') || (chr >= '0' && chr <= '9'));
+		return (isUpperCase(chr) || isLowerCase(chr) || isNum(chr));
 	}
 
 	public static boolean isSpecialChar(char chr, boolean allowUnder) {
 		// Return true if chr is a dash (-), period (.)
 		// if allowUnder is true, chr=='_', will return true, false otherwise.
-		if (allowUnder) {
-			return chr == '-' || chr == '.' || chr == '_';
-		}
-		return chr == '-' || chr == '.';
-
+		boolean isDashOrPeriod = chr == '-' || chr == '.';
+		if (allowUnder)
+			return isDashOrPeriod || chr == '_';
+		return isDashOrPeriod;
 	}
 
 	public static boolean isPrefixChar(char chr) {
@@ -119,7 +130,8 @@ public class Validator {
 
 //		» The second portion contains only letters of the alphabet.
 		for (int i = 0; i < str2.length(); i++) {
-			if (!((str2.charAt(i) >= 'A' && str2.charAt(i) <= 'Z') || (str2.charAt(i) >= 'a' && str2.charAt(i) <= 'z')))
+			char chr = str2.charAt(i);
+			if (!(isUpperCase(chr) || isLowerCase(chr)))
 				return false;
 		}
 
@@ -219,11 +231,11 @@ public class Validator {
 
 		for (int i = 0; i < chrArray.length; i++) {
 			chr = chrArray[i];
-			if ((!uLetter) && chr >= 'A' && chr <= 'Z')
+			if ((!uLetter) && isUpperCase(chr))
 				uLetter = true;
-			else if ((!lLetter) && chr >= 'a' && chr <= 'z')
+			else if ((!lLetter) && isLowerCase(chr))
 				lLetter = true;
-			else if ((!number) && chr >= '0' && chr <= '9')
+			else if ((!number) && isNum(chr))
 				number = true;
 			else if ((!specialChar) && isSpecialChar(chr, true))
 				specialChar = true;
