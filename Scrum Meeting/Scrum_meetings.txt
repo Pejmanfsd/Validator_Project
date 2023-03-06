@@ -48,3 +48,17 @@ Third Meeting Summary:
 	1. Debuging the source code.
 	2. Working on the Word document.
 ----------------------------------------------------------------------
+Fifth Meeting Summary:
+
+	Date: March 6, 11:30 PM to 11:45 PM
+	Attendees: Entire group
+	Meeting Minutes Taker: Shiyuan
+	
+	Agenda:
+	1. Discussed the Division in writing document.
+	2. Solved the questions so far.
+	
+	Tasks for the next meeting:
+	1. Finishing debugging.
+	2. First version of the document.
+	----------------------------------------------------------------------
