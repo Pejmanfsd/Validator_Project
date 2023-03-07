@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Validator {
 
 	public static boolean isUpperCase(char chr) {
@@ -223,12 +221,13 @@ public class Validator {
 		// and one period, dash or underscore.
 		boolean specialChar = false;
 
-		char[] chrArray = str.toCharArray();
-		Arrays.sort(chrArray);
 		char chr;
-
-		for (int i = 0; i < chrArray.length; i++) {
-			chr = chrArray[i];
+		for (int i = 0; i < str.length(); i++) {
+			chr = str.charAt(i);
+			// The same character must never be repeated twice consecutively
+			if (i < str.length() - 1)
+				if (chr == str.charAt(i + 1))
+					return false;
 			if ((!uLetter) && isUpperCase(chr))
 				uLetter = true;
 			else if ((!lLetter) && isLowerCase(chr))
@@ -237,12 +236,9 @@ public class Validator {
 				number = true;
 			else if ((!specialChar) && isSpecialChar(chr, true))
 				specialChar = true;
-			// The same character must never be repeated more than twice
-			if (i > 0 && i < chrArray.length - 1) {
-				if ((chr == chrArray[i - 1]) && (chr == chrArray[i + 1]))
-					return false;
-			}
+
 		}
+
 		if (!(uLetter && lLetter && number && specialChar))
 			return false;
 
@@ -252,7 +248,8 @@ public class Validator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(isUsername("-User2"));
+		System.out.println(safePassword("D1nn3r-T1m3"));
+
 	}
 
 }
