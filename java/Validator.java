@@ -161,9 +161,7 @@ public class Validator {
 		if (str == null) {
 			return "";
 		}
-		if (str == "") {
-			return "";
-		}
+
 		// Evaluating the first condition (containing at least one alphanumeric
 		// character):
 		boolean condition_1 = false;
@@ -254,11 +252,7 @@ public class Validator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		System.out.println(isUsername(".3de3."));
-
-//		System.out.println(safePassword("32_#Fa!#Zz"));
-
+		System.out.println(isUsername("-User2"));
 	}
 
 }
